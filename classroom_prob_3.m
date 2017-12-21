@@ -1,0 +1,21 @@
+clc;
+clear;
+t=linspace(-2*pi, 2*pi, 1000);
+V=1;
+w=1;
+Vc=V*cos(w*t);
+Vs=-V*cos(w*t);
+figure;
+plot(t,Vc,'r',t,Vs,'b');
+xlabel(' Time ');
+ylabel(' V ');
+title(' Graph One ');
+
+E0 = 1;
+Ec = E0 * cos(w*t).^2;
+El = E0 * sin(w*t).^2;
+figure;
+plot(t, Ec, 'b', t, El, 'r');
+xlabel(' Time ');
+ylabel(' E ');
+title(' Graph Two ');
